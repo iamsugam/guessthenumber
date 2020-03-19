@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Guess The Number Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="init()">
+
+	<div id="container">
+		<div class="panel">
+			<h2>I have random number <br> between 1 and 100</h2>
+			<h3>Dare to guess?</h3><hr>
+			<p>Select difficulty setting:</p>
+			<button id="easyBtn" onclick="easyMode()" class="">Easy: Guess in 10 attempts (default)</button>
+			<button id="hardBtn" onclick="hardMode()" class="">Hard: Guess in 5 attempts</button>
+			<button id="newGameBtn" onclick="newGame()"> New Game</button>
+		</div>
+
+		<div class="panel">
+			<h3 id="textOutput">Enter your guess below &amp; press enter</h3>
+			<input type="number" id="inputBox" onchange="compareGuess()" autocomplete="off">
+			<p>No. of previous attempts: <span id="attempts"></span></p>
+		</div>
+
+		<div class="panel">
+			<p>Your previous guesses:</p>
+			<p id="guessLog"></p>
+		</div>
+	</div>
+
+	
+	<script src="script.js"></script>
+
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
